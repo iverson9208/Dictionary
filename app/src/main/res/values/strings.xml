@@ -7,7 +7,12 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="head1">РАЗДЕЛ 1. СТРУКТУРА И ОРГАНИЗАЦИЯ УПРАВЛЕНИЯ КОКСОХИМИЧЕСКИМИ ПРЕДПРИЯТИЯМИ
+    И ПРОИЗВОДСТВАМИ</string>
+    <string name="head2">РАЗДЕЛ 2. ОСНОВНОЕ ПРОИЗВОДСТВО</string>
+    <string name="head3">РАЗДЕЛ 3. ВСПОМОГАТЕЛЬНЫЕ СЛУЖБЫ</string>
+    <string name="head4">РАЗДЕЛ 4. ЭКОЛОГИЧЕСКАЯ БЕЗОПАСНОСТЬ</string>
+    <string name="head5">РАЗДЕЛ 5. КОНТРОЛЬ ПРОИЗВОДСТВА</string>
+    <string name="end_title">ЗАКЛЮЧЕНИЕ</string>
+    <string name="app_end">ПРИЛОЖЕНИЯ</string>
 </resources>

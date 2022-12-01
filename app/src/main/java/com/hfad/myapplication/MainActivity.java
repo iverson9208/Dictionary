@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -25,13 +27,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
 private DrawerLayout drawer;
+private ListView listView;
+private String[] array;
+private ArrayAdapter<String> arrayAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
+        listView=findViewById(R.id.listview);
+        array=getResources().getStringArray(R.array.chapter1);
+        arrayAdapter=new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,array);
+        listView.setAdapter(arrayAdapter);
         setSupportActionBar(binding.appBarMain.toolbar);
         drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
@@ -55,9 +63,9 @@ toggle.syncState();
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id=item.getItemId();
-       if (id==R.id.nav_home){} else
-           if(id==R.id.nav_gallery){}else
-              // if(id==R.id.nav_slideshow){}else
+       if (id==R.id.id_head1){} else
+           if(id==R.id.id_head2){}else
+              if(id==R.id.id_head3){}else
                 drawer.closeDrawer(GravityCompat.START);
 
         return true;
