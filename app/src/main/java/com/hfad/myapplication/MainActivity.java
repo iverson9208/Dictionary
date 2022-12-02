@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.Menu;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-
+import android.R.id;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
@@ -21,6 +21,9 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.hfad.myapplication.databinding.ActivityMainBinding;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -38,7 +41,7 @@ private ArrayAdapter<String> arrayAdapter;
         setContentView(binding.getRoot());
         listView=findViewById(R.id.listview);
         array=getResources().getStringArray(R.array.chapter1);
-        arrayAdapter=new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,array);
+        arrayAdapter=new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,new ArrayList<String>(Arrays.asList(array)));
         listView.setAdapter(arrayAdapter);
         setSupportActionBar(binding.appBarMain.toolbar);
         drawer = binding.drawerLayout;
@@ -63,11 +66,28 @@ toggle.syncState();
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id=item.getItemId();
-       if (id==R.id.id_head1){} else
-           if(id==R.id.id_head2){}else
-              if(id==R.id.id_head3){}else
+       if (id==R.id.id_head1){
+           array=getResources().getStringArray(R.array.chapter1);
+           arrayAdapter.clear();
+           arrayAdapter.addAll(array);
+           arrayAdapter.notifyDataSetChanged();
+           drawer.closeDrawer(GravityCompat.START);
+       } else
+           if(id==R.id.id_head2){
+               array=getResources().getStringArray(R.array.chapter2);
+               arrayAdapter.clear();
+               arrayAdapter.addAll(array);
+               arrayAdapter.notifyDataSetChanged();
+               drawer.closeDrawer(GravityCompat.START);
+           }else
+              if(id==R.id.id_head3){
+                  array=getResources().getStringArray(R.array.chapter2);
+                  arrayAdapter.clear();
+                  arrayAdapter.addAll(array);
+                  arrayAdapter.notifyDataSetChanged();
+                  drawer.closeDrawer(GravityCompat.START);
+              }else
                 drawer.closeDrawer(GravityCompat.START);
-
         return true;
     }
 }
