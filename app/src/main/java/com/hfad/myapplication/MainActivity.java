@@ -1,12 +1,16 @@
 package com.hfad.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.R.id;
+import android.widget.Toolbar;
+
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
@@ -33,6 +37,7 @@ private DrawerLayout drawer;
 private ListView listView;
 private String[] array;
 private ArrayAdapter<String> arrayAdapter;
+private Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,6 +56,13 @@ private ArrayAdapter<String> arrayAdapter;
                 R.string.navigation_drawer_close);
 drawer.addDrawerListener(toggle);
 toggle.syncState();
+listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+        Intent intent=new Intent(MainActivity.this,TextContentActivity.class);
+        startActivity(intent);
+    }
+});
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
 
@@ -67,6 +79,7 @@ toggle.syncState();
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id=item.getItemId();
        if (id==R.id.id_head1){
+          // toolbar.setTitle(R.string.head1);
            array=getResources().getStringArray(R.array.chapter1);
            arrayAdapter.clear();
            arrayAdapter.addAll(array);

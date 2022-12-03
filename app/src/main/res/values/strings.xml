@@ -15,4 +15,6 @@
     <string name="head5">РАЗДЕЛ 5. КОНТРОЛЬ ПРОИЗВОДСТВА</string>
     <string name="end_title">ЗАКЛЮЧЕНИЕ</string>
     <string name="app_end">ПРИЛОЖЕНИЯ</string>
+    <string name="a_test">Test</string>
+
 </resources>
