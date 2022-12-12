@@ -12,7 +12,7 @@ public class TextContentActivity extends AppCompatActivity {
     private int category;
     private int position;
     private final int[] arraySection1 = {R.string.chapter1_text,R.string.chapter2,R.string.chapter3};
-    private final int[] arraySection2 ={};
+    private final int[] arraySection2 ={R.string.chapter4};
     private final int[] arraySection3={};
     private final int[] arraySection4={};
     private final int[] arraySection5={};
@@ -36,6 +36,7 @@ public class TextContentActivity extends AppCompatActivity {
                 text_content.setText(arraySection1[position]);
                 break;
             case 1:
+                text_content.setText(arraySection2[position]);
                 break;
             case 2:
                 break;
