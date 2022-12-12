@@ -38,6 +38,7 @@ private ListView listView;
 private String[] array;
 private ArrayAdapter<String> arrayAdapter;
 private Toolbar toolbar;
+private int categoryIndex;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,8 +59,10 @@ drawer.addDrawerListener(toggle);
 toggle.syncState();
 listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
     @Override
-    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+    public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
         Intent intent=new Intent(MainActivity.this,TextContentActivity.class);
+        intent.putExtra("category", categoryIndex);
+        intent.putExtra("position", position);
         startActivity(intent);
     }
 });
@@ -85,6 +88,7 @@ listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
            arrayAdapter.addAll(array);
            arrayAdapter.notifyDataSetChanged();
            drawer.closeDrawer(GravityCompat.START);
+           categoryIndex=0;
        } else
            if(id==R.id.id_head2){
                array=getResources().getStringArray(R.array.chapter2);
@@ -92,6 +96,7 @@ listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                arrayAdapter.addAll(array);
                arrayAdapter.notifyDataSetChanged();
                drawer.closeDrawer(GravityCompat.START);
+               categoryIndex=1;
            }else
               if(id==R.id.id_head3){
                   array=getResources().getStringArray(R.array.chapter2);
