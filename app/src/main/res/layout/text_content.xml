@@ -19,13 +19,13 @@
             android:orientation="vertical" >
 
 
-            <LinearLayout
+            <ImageView
+                android:id="@+id/imageContent"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:orientation="horizontal"
-                >
+                android:orientation="horizontal">
 
-            </LinearLayout>
+            </ImageView>
 
             <TextView
                 android:id="@+id/textView"
