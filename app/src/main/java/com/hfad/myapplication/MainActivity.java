@@ -104,6 +104,7 @@ listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                   arrayAdapter.addAll(array);
                   arrayAdapter.notifyDataSetChanged();
                   drawer.closeDrawer(GravityCompat.START);
+                  categoryIndex=2;
               }else
                   if(id==R.id.id_head4)
                   {
@@ -112,6 +113,7 @@ listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                       arrayAdapter.addAll(array);
                       arrayAdapter.notifyDataSetChanged();
                       drawer.closeDrawer(GravityCompat.START);
+                      categoryIndex=3;
                   }else
                   if(id==R.id.id_head5)
                   {
@@ -120,6 +122,8 @@ listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                       arrayAdapter.addAll(array);
                       arrayAdapter.notifyDataSetChanged();
                       drawer.closeDrawer(GravityCompat.START);
+                      categoryIndex=4;
+
                   }else
                   if(id==R.id.id_end_title)
                   {
@@ -128,14 +132,16 @@ listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                       arrayAdapter.addAll(array);
                       arrayAdapter.notifyDataSetChanged();
                       drawer.closeDrawer(GravityCompat.START);
+                      categoryIndex=5;
                   }else
-                  if(id==R.id.id_end_title)
+                  if(id==R.id.id_app_end)
                   {
                       array=getResources().getStringArray(R.array.annex);
                       arrayAdapter.clear();
                       arrayAdapter.addAll(array);
                       arrayAdapter.notifyDataSetChanged();
                       drawer.closeDrawer(GravityCompat.START);
+                      categoryIndex=6;
                   }
                 drawer.closeDrawer(GravityCompat.START);
         return true;
