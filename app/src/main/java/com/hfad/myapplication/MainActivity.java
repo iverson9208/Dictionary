@@ -99,12 +99,44 @@ listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                categoryIndex=1;
            }else
               if(id==R.id.id_head3){
-                  array=getResources().getStringArray(R.array.chapter2);
+                  array=getResources().getStringArray(R.array.chapter3);
                   arrayAdapter.clear();
                   arrayAdapter.addAll(array);
                   arrayAdapter.notifyDataSetChanged();
                   drawer.closeDrawer(GravityCompat.START);
               }else
+                  if(id==R.id.id_head4)
+                  {
+                      array=getResources().getStringArray(R.array.chapter4);
+                      arrayAdapter.clear();
+                      arrayAdapter.addAll(array);
+                      arrayAdapter.notifyDataSetChanged();
+                      drawer.closeDrawer(GravityCompat.START);
+                  }else
+                  if(id==R.id.id_head5)
+                  {
+                      array=getResources().getStringArray(R.array.chapter5);
+                      arrayAdapter.clear();
+                      arrayAdapter.addAll(array);
+                      arrayAdapter.notifyDataSetChanged();
+                      drawer.closeDrawer(GravityCompat.START);
+                  }else
+                  if(id==R.id.id_end_title)
+                  {
+                      array=getResources().getStringArray(R.array.Conclusion);
+                      arrayAdapter.clear();
+                      arrayAdapter.addAll(array);
+                      arrayAdapter.notifyDataSetChanged();
+                      drawer.closeDrawer(GravityCompat.START);
+                  }else
+                  if(id==R.id.id_end_title)
+                  {
+                      array=getResources().getStringArray(R.array.annex);
+                      arrayAdapter.clear();
+                      arrayAdapter.addAll(array);
+                      arrayAdapter.notifyDataSetChanged();
+                      drawer.closeDrawer(GravityCompat.START);
+                  }
                 drawer.closeDrawer(GravityCompat.START);
         return true;
     }
