@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class TextContentActivity extends AppCompatActivity {
@@ -16,6 +17,7 @@ public class TextContentActivity extends AppCompatActivity {
     private Typeface typeface;
     private int category;
     private int position;
+    private ActionBar  actionBar;
     private final int[] arraySection1 = {R.string.chapter1_text,R.string.chapter2,R.string.chapter3};
     private final int[] arraySection2 ={R.string.chapter4,R.string.chapter5,R.string.chapter6,R.string.chapter7,R.string.chapter8,R.string.chapter9,R.string.chapter10,R.string.chapter11,R.string.chapter12,R.string.chapter13,R.string.chapter14};
     private final int[] arraySection3={R.string.chapter15,R.string.chapter16,R.string.chapter17};
@@ -29,9 +31,16 @@ public class TextContentActivity extends AppCompatActivity {
     private final int[] imageSection3 = {R.drawable.chapter15,R.drawable.chapter16,R.drawable.chapter17};
     private final int[] imageSection4 = {R.drawable.chapter18};
     private final int[] imageSection5 = {R.drawable.chapter19,R.drawable.chapter20,R.drawable.chapter21,R.drawable.chapter22};
+    private final String[] textToolBarSection1={"Глава 1","Глава 2","Глава 3"};
+    private final String[] textToolBarSection2={"Глава 4","Глава 5","Глава 6","Глава 7","Глава 8","Глава 9",
+            "Глава 10","Глава 11","Глава 12","Глава 13","Глава 14"};
+    private final String[] textToolBarSection3={"Глава 15","Глава 16","Глава 17",};
+    private final String[] textToolBarSection4={"Глава 18"};
+    private final String[] textToolBarSection5={"Глава 19","Глава 20", "Глава 21","Глава 22"};
     @SuppressLint({"WrongViewCast", "MissingInflatedId"})
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+        actionBar=getSupportActionBar();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.text_content);
         text_content=findViewById(R.id.textView);
@@ -50,30 +59,37 @@ public class TextContentActivity extends AppCompatActivity {
         }
         switch (category){
             case 0:
-               iContent.setImageResource(imageSection1[position]);
+                actionBar.setTitle(textToolBarSection1[position]);
                 text_content.setText(arraySection1[position]);
                 break;
             case 1:
+                actionBar.setTitle(textToolBarSection2[position]);
                 text_content.setText(arraySection2[position]);
                 iContent.setImageResource(imageSection2[position]);
                 break;
             case 2:
+                actionBar.setTitle(textToolBarSection3[position]);
                 text_content.setText(arraySection3[position]);
                 iContent.setImageResource(imageSection3[position]);
                 break;
             case 3:
+                actionBar.setTitle(textToolBarSection4[position]);
                 text_content.setText(arraySection4[position]);
                 iContent.setImageResource(imageSection4[position]);
                 break;
             case 4:
+                actionBar.setTitle(textToolBarSection5[position]);
                 text_content.setText(arraySection5[position]);
                 iContent.setImageResource(imageSection5[position]);
                 break;
             case 5:
+                actionBar.setTitle("Заключение");
                 text_content.setText(ConclusionSection[position]);
                 iContent.setImageResource(imageSection1[position]);
                 break;
             case 6:
+                actionBar.setTitle("Приложения");
+                actionBar.isShowing();
                 text_content.setText(ApplicationText[position]);
                 iContent.setImageResource(imageSection1[position]);
                 break;

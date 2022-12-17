@@ -66,5 +66,10 @@
         <item>2. Термины и определения</item>
         <item>3. Перечень сокращений, используемых в тексте</item>
     </string-array>
+    <string-array name="main_text_size_array">
+        <item>Большой текст</item>
+        <item>Средний текст</item>
+        <item>Маленький текст</item>
+    </string-array>
 
 </resources>
