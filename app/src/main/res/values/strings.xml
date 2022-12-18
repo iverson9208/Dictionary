@@ -6,7 +6,8 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Настройки</string>
-
+<string name="main_text_size">Размер текста</string>
+    <string name="title_preference_text">Настройка текста</string>
     <string name="head1">РАЗДЕЛ 1. СТРУКТУРА И ОРГАНИЗАЦИЯ УПРАВЛЕНИЯ КОКСОХИМИЧЕСКИМИ ПРЕДПРИЯТИЯМИ
     И ПРОИЗВОДСТВАМИ</string>
     <string name="head2">РАЗДЕЛ 2. ОСНОВНОЕ ПРОИЗВОДСТВО</string>

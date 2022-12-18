@@ -3,13 +3,13 @@
 
     <PreferenceCategory
         android:layout_height="wrap_content"
-        android:title="Preference category">
+        android:title="@string/title_preference_text">
 
         <ListPreference
             android:defaultValue="Средний"
             android:entries="@array/main_text_size_array"
             android:entryValues="@array/main_text_size_array"
-            android:key="list_preference_1"
-            android:title="List preference" />
+            android:key="main_text_size"
+            android:title="@string/main_text_size" />
     </PreferenceCategory>
 </PreferenceScreen>

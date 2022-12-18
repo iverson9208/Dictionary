@@ -25,6 +25,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.hfad.myapplication.databinding.ActivityMainBinding;
+import com.hfad.myapplication.settings.SettingsActivity;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -75,6 +76,17 @@ listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id=item.getItemId();
+        if(id==R.id.action_settings)
+        {
+            Intent intent=new Intent(MainActivity.this, SettingsActivity.class);
+            startActivity(intent);
+        }
         return true;
     }
 

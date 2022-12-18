@@ -6,11 +6,13 @@ import android.preference.PreferenceFragment;
 
 import androidx.annotation.Nullable;
 
+import com.hfad.myapplication.R;
+
 public class SettingsFragment extends PreferenceFragment {
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource();
+        addPreferencesFromResource(R.xml.preference_screen);
     }
 }

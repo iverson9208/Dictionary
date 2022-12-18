@@ -2,8 +2,11 @@ package com.hfad.myapplication;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.preference.PreferenceFragment;
+import android.preference.PreferenceManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -18,6 +21,7 @@ public class TextContentActivity extends AppCompatActivity {
     private int category;
     private int position;
     private ActionBar  actionBar;
+    private SharedPreferences def_pref;
     private final int[] arraySection1 = {R.string.chapter1_text,R.string.chapter2,R.string.chapter3};
     private final int[] arraySection2 ={R.string.chapter4,R.string.chapter5,R.string.chapter6,R.string.chapter7,R.string.chapter8,R.string.chapter9,R.string.chapter10,R.string.chapter11,R.string.chapter12,R.string.chapter13,R.string.chapter14};
     private final int[] arraySection3={R.string.chapter15,R.string.chapter16,R.string.chapter17};
@@ -48,7 +52,22 @@ public class TextContentActivity extends AppCompatActivity {
         typeface=Typeface.createFromAsset(this.getAssets(),"fonts/Rubik-Regular.ttf");
         text_content.setTypeface(typeface);
         recieveIntent();
+init();
+
     }
+private void init(){
+    def_pref= PreferenceManager.getDefaultSharedPreferences(this);
+    String text=def_pref.getString("main_text_size","Средний текст");
+    switch (text)
+    {
+        case "Большой текст":text_content.setTextSize(24);
+        break;
+        case "Средний текст":text_content.setTextSize(18);
+            break;
+        case "Маленький текст":text_content.setTextSize(14);
+            break;
+    }
+}
     private void recieveIntent()
     {
         Intent i=getIntent();
