@@ -2,20 +2,28 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:showIn="navigation_view">
+
+    tools:showIn="navigation_view"
+    >
 
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/id_head1"
-            android:icon="@mipmap/ic_chapter1"
-            android:title="@string/head1" />
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/head1"
+            app:showAsAction="always"
+            />
         <item
+
             android:id="@+id/id_head2"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/head2" />
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/head2"
+            app:showAsAction="always"
+
+             />
         <item
             android:id="@+id/id_head3"
-            android:icon="@mipmap/ic_chapter1"
+            android:icon="@drawable/ic_menu_slideshow"
 
             android:title="@string/head3" />
         <item
