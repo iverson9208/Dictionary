@@ -23,7 +23,7 @@ public class TextContentActivity extends AppCompatActivity {
     private ActionBar  actionBar;
     private SharedPreferences def_pref;
     private final int[] arraySection1 = {R.string.chapter1_text,R.string.chapter2,R.string.chapter3};
-    private final int[] arraySection2 ={R.string.chapter4,R.string.chapter5,R.string.chapter6,R.string.chapter7,R.string.chapter8,R.string.chapter9,R.string.chapter10,R.string.chapter11,R.string.chapter12,R.string.chapter13,R.string.chapter14};
+    private final int[] arraySection2 ={R.string.chapter4,R.string.chapter5,R.string.chapter6,R.string.chapter7ch6,R.string.chapter8,R.string.chapter9,R.string.chapter10,R.string.chapter11,R.string.chapter12,R.string.chapter13,R.string.chapter14};
     private final int[] arraySection3={R.string.chapter15,R.string.chapter16,R.string.chapter17};
     private final int[] arraySection4={R.string.chapter18};
     private final int[] arraySection5={R.string.chapter19,R.string.chapter20,R.string.chapter21,R.string.chapter22};
@@ -80,14 +80,44 @@ private void init(){
             case 0:
                 actionBar.setTitle(textToolBarSection1[position]);
                 text_content.setText(arraySection1[position]);
+                iContent.setImageResource(imageSection1[position]);
                 break;
             case 1:
                 actionBar.setTitle(textToolBarSection2[position]);
+                if(position==3){
+                    text_content.setText(getString(R.string.chapter7ch1)+getString(R.string.chapter7ch1ch2)
+                    +getString(
+                    R.string.chapter7ch1ch3) +getString(
+                    R.string.chapter7ch1ch4) +getString(
+                    R.string.chapter7ch5) +getString(
+                    (R.string.chapter7ch6)));
+
+                }else
+                    if(position==4){
+                        text_content.setText(getString(R.string.chapter8)+getString(R.string.chapter8ch1));
+                    }else
+                        if(position==5)
+                        {
+                            text_content.setText(getString(R.string.chapter9)+getString(R.string.chapter9ch1)
+                                    +getString(R.string.chapter9ch2)+getString(R.string.chapter9ch3));
+                        }else
+                            if(position==7)
+                            {
+                                text_content.setText(getString(R.string.chapter11)+getString(R.string.chapter11ch1));
+                            }else
                 text_content.setText(arraySection2[position]);
                 iContent.setImageResource(imageSection2[position]);
                 break;
             case 2:
                 actionBar.setTitle(textToolBarSection3[position]);
+                if(position==0)
+                {
+                    text_content.setText(getString(R.string.chapter15)+getString(R.string.chapter15ch1));
+                }else
+                    if(position==1)
+                    {
+                        text_content.setText(getString(R.string.chapter16)+getString(R.string.chapter16ch1));
+                    }
                 text_content.setText(arraySection3[position]);
                 iContent.setImageResource(imageSection3[position]);
                 break;
@@ -98,6 +128,10 @@ private void init(){
                 break;
             case 4:
                 actionBar.setTitle(textToolBarSection5[position]);
+                if(position==0)
+                {
+                    text_content.setText(getString(R.string.chapter19)+getString(R.string.chapter19ch1));
+                }
                 text_content.setText(arraySection5[position]);
                 iContent.setImageResource(imageSection5[position]);
                 break;
