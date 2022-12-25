@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.R.id;
+import android.widget.Toast;
 import android.widget.Toolbar;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -26,6 +27,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.hfad.myapplication.databinding.ActivityMainBinding;
 import com.hfad.myapplication.settings.SettingsActivity;
+import com.hfad.myapplication.settings.tabb;
+import com.hfad.myapplication.settings.table_chapter20;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -87,6 +90,10 @@ listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             Intent intent=new Intent(MainActivity.this, SettingsActivity.class);
             startActivity(intent);
         }
+            if (id == R.id.about) {
+                Intent intent = new Intent(MainActivity.this, tabb.class);
+                startActivity(intent);
+            }
         return true;
     }
 

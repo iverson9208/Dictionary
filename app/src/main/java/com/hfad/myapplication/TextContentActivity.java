@@ -7,6 +7,7 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
+import android.text.Html;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -116,7 +117,7 @@ private void init(){
                 }else
                     if(position==1)
                     {
-                        text_content.setText(getString(R.string.chapter16)+getString(R.string.chapter16ch1));
+                        text_content.setText(Html.fromHtml(getString(R.string.chapter16))+getString(R.string.chapter16ch1));
                     }
                 text_content.setText(arraySection3[position]);
                 iContent.setImageResource(imageSection3[position]);

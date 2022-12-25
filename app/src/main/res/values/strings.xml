@@ -6,7 +6,8 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Настройки</string>
-<string name="main_text_size">Размер текста</string>
+    <string name="main_text_size">Размер текста</string>
+    <string name="about">О приложении</string>
     <string name="title_preference_text">Настройка текста</string>
     <string name="head1">РАЗДЕЛ 1. СТРУКТУРА И ОРГАНИЗАЦИЯ УПРАВЛЕНИЯ КОКСОХИМИЧЕСКИМИ ПРЕДПРИЯТИЯМИ
     И ПРОИЗВОДСТВАМИ</string>
@@ -20,5 +21,14 @@
     <string name="title_activity_fullscreen">FullscreenActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_table_chapter20">table_chapter20</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
 </resources>
