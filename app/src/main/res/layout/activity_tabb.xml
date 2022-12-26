@@ -12,7 +12,7 @@
             android:layout_height="wrap_content">
             <TableRow>
                 <TextView
-                    android:text="Щелкните на кнопке Усадка, чтобы увидеть, как длинный текст может уместиться в ячейке таблицы"
+                    android:text="Powered by iverson9208"
                     android:padding="3dip" />
             </TableRow>
         </TableLayout>

@@ -11,46 +11,30 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/logapp"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MyApplication"
+        android:theme="@style/Theme.Design"
         tools:targetApi="31">
 
-        <activity
-            android:name=".settings.tabb"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+        <activity  android:name=".settings.SView" />
 
         <activity
-            android:name=".settings.table_chapter20"
-            android:exported="false"
-            android:label="@string/title_activity_table_chapter20"
-            android:theme="@style/Theme.MyApplication.NoActionBar">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+            android:name=".settings.table_chapter20" />
+
         <activity
-            android:name=".settings.SpashScreen"
+            android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            android:theme="@style/Theme.Design.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-             <!--   <action android:name="android.intent.action.MAIN" />-->
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name=".settings.spl" />
         <activity android:name=".TextContentActivity" />
         <activity android:name=".settings.SettingsActivity" />
-
-
+        <activity android:name=".settings.tabb" />
+        />
     </application>
 
 </manifest>
-  <!--  ".MainActivity"-->
-<!--
-<activity android:name=".settings.SpashScreen" />-->

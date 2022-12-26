@@ -1,11 +1,12 @@
 <resources>
-    <string name="app_name"><b>Справочник коксохимика</b></string>
+    <string name="app_name">Правила эксплуатации</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Справочник коксохимика</string>
+    <string name="nav_header_title">ПТЭ коксохимических предприятий и производств</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Настройки</string>
+    <string name="search_text">Поиск по тексту</string>
     <string name="main_text_size">Размер текста</string>
     <string name="about">О приложении</string>
     <string name="title_preference_text">Настройка текста</string>

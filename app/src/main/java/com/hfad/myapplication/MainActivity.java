@@ -8,27 +8,21 @@ import android.view.Menu;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.R.id;
-import android.widget.Toast;
 import android.widget.Toolbar;
 
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.core.view.GravityCompat;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.hfad.myapplication.databinding.ActivityMainBinding;
+import com.hfad.myapplication.settings.SView;
 import com.hfad.myapplication.settings.SettingsActivity;
 import com.hfad.myapplication.settings.tabb;
-import com.hfad.myapplication.settings.table_chapter20;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -50,10 +44,10 @@ private int categoryIndex;
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         listView=findViewById(R.id.listview);
-        array=getResources().getStringArray(R.array.chapter1);
+        array=getResources().getStringArray(R.array.intro);
         arrayAdapter=new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,new ArrayList<String>(Arrays.asList(array)));
         listView.setAdapter(arrayAdapter);
-        setSupportActionBar(binding.appBarMain.toolbar);
+      setSupportActionBar(binding.appBarMain.toolbar);
         drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         navigationView.setNavigationItemSelectedListener(this);
@@ -90,10 +84,16 @@ listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             Intent intent=new Intent(MainActivity.this, SettingsActivity.class);
             startActivity(intent);
         }
+        if(id==R.id.search_text)
+        {
+            Intent intent = new Intent(MainActivity.this, SView.class);
+            startActivity(intent);
+        }
             if (id == R.id.about) {
                 Intent intent = new Intent(MainActivity.this, tabb.class);
                 startActivity(intent);
             }
+
         return true;
     }
 
