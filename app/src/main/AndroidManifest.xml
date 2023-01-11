@@ -7,17 +7,13 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/logapp"
+        android:icon="@drawable/logoactivity"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/logapp"
+        android:roundIcon="@drawable/logoactivity"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design"
         tools:targetApi="31">
-
-        <activity  android:name=".settings.SView" />
-
-        <activity
-            android:name=".settings.table_chapter20" />
+        <activity android:name=".settings.SView" />
 
         <activity
             android:name=".MainActivity"
@@ -34,7 +30,10 @@
         <activity android:name=".TextContentActivity" />
         <activity android:name=".settings.SettingsActivity" />
         <activity android:name=".settings.tabb" />
-        />
+        <activity android:name=".settings.Application1" />
+        <activity android:name=".settings.table_chapter20" />
+        <activity android:name=".settings.SpashScreen"/>
+
     </application>
 
 </manifest>

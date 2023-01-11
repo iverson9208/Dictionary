@@ -17,13 +17,24 @@ public class SpashScreen extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spash_screen);
-  new Handler().postDelayed(new Runnable() {
+ /* new Handler().postDelayed(new Runnable() {
         @Override
         public void run() {
             startActivity(new Intent(SpashScreen.this,  MainActivity.class));
-            finish();
-
+                      finish();
         }
-  }, 2500);
+  }, 2500);*/
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                Intent intent=new Intent(SpashScreen.this,MainActivity.class);
+                startActivity(intent);
+            }
+        }).start();
     }
 }

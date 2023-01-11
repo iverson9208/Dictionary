@@ -43,11 +43,12 @@ private int categoryIndex;
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        setSupportActionBar(binding.appBarMain.toolbar);
         listView=findViewById(R.id.listview);
         array=getResources().getStringArray(R.array.intro);
         arrayAdapter=new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,new ArrayList<String>(Arrays.asList(array)));
         listView.setAdapter(arrayAdapter);
-      setSupportActionBar(binding.appBarMain.toolbar);
+
         drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         navigationView.setNavigationItemSelectedListener(this);

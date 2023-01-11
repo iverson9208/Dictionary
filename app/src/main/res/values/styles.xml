@@ -4,7 +4,7 @@
         <item name="android:background">@color/black_overlay</item>
     </style>
 
-    <style name="Widget.Theme.MyApplication.ButtonBar.Fullscreen" parent="">
+    <style name="Widget.Theme.MyApplication.ButtonBar.Fullscreen" parent="Theme.Design.NoActionBar">
         <item name="android:background">@color/black_overlay</item>
         <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
         <item name="android:windowFullscreen">true</item>

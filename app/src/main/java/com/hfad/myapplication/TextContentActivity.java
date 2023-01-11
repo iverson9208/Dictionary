@@ -15,6 +15,10 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.hfad.myapplication.settings.Application1;
+import com.hfad.myapplication.settings.SView;
+import com.hfad.myapplication.settings.table_chapter20;
+
 public class TextContentActivity extends AppCompatActivity {
     private TextView text_content;
     private ImageView iContent;
@@ -35,7 +39,7 @@ public class TextContentActivity extends AppCompatActivity {
             R.drawable.chapter10,R.drawable.chapter11,R.drawable.chapter12,R.drawable.chapter13,R.drawable.chapter14,};
     private final int[] imageSection3 = {R.drawable.chapter15,R.drawable.chapter16,R.drawable.chapter17};
     private final int[] imageSection4 = {R.drawable.chapter18};
-    private final int[] imageSection5 = {R.drawable.chapter19,R.drawable.chapter20,R.drawable.chapter21,R.drawable.chapter22};
+    private final int[] imageSection5 = {R.drawable.chapter19,R.drawable.chapter19,R.drawable.chapter21,R.drawable.chapter22};
     private final String[] textToolBarSection1={"Глава 1","Глава 2","Глава 3"};
     private final String[] textToolBarSection2={"Глава 4","Глава 5","Глава 6","Глава 7","Глава 8","Глава 9",
             "Глава 10","Глава 11","Глава 12","Глава 13","Глава 14"};
@@ -45,9 +49,10 @@ public class TextContentActivity extends AppCompatActivity {
     @SuppressLint({"WrongViewCast", "MissingInflatedId"})
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-        actionBar=getSupportActionBar();
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.text_content);
+        actionBar=getSupportActionBar();
         text_content=findViewById(R.id.textView);
        iContent=findViewById(R.id.imageContent);
         typeface=Typeface.createFromAsset(this.getAssets(),"fonts/Rubik-Regular.ttf");
@@ -129,13 +134,20 @@ private void init(){
                 break;
             case 4:
                 actionBar.setTitle(textToolBarSection5[position]);
+                if(position==1)
+                {
+                    Intent intent = new Intent(TextContentActivity.this, table_chapter20.class);
+                    startActivity(intent);
+                }else
                 if(position==0)
                 {
                     text_content.setText(getString(R.string.chapter19)+getString(R.string.chapter19ch1));
-                }
-                text_content.setText(arraySection5[position]);
-                iContent.setImageResource(imageSection5[position]);
-                break;
+                }else
+
+                    text_content.setText(arraySection5[position]);
+                    iContent.setImageResource(imageSection5[position]);
+                    break;
+
             case 5:
                 actionBar.setTitle("Заключение");
                 text_content.setText(ConclusionSection[position]);
@@ -144,9 +156,16 @@ private void init(){
             case 6:
                 actionBar.setTitle("Приложения");
                 actionBar.isShowing();
-                text_content.setText(ApplicationText[position]);
-                iContent.setImageResource(imageSection1[position]);
-                break;
+                if(position==3)
+                {
+                    Intent intent = new Intent(TextContentActivity.this, Application1.class);
+                    startActivity(intent);
+
+                }else {
+                    text_content.setText(ApplicationText[position]);
+                    iContent.setImageResource(imageSection1[position]);
+                    break;
+                }
         }
     }
 }

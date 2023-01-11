@@ -10,12 +10,11 @@
     <string name="main_text_size">Размер текста</string>
     <string name="about">О приложении</string>
     <string name="title_preference_text">Настройка текста</string>
-    <string name="head1">РАЗДЕЛ 1. СТРУКТУРА И ОРГАНИЗАЦИЯ УПРАВЛЕНИЯ КОКСОХИМИЧЕСКИМИ ПРЕДПРИЯТИЯМИ
-    И ПРОИЗВОДСТВАМИ</string>
-    <string name="head2">РАЗДЕЛ 2. ОСНОВНОЕ ПРОИЗВОДСТВО</string>
-    <string name="head3">РАЗДЕЛ 3. ВСПОМОГАТЕЛЬНЫЕ СЛУЖБЫ</string>
-    <string name="head4">РАЗДЕЛ 4. ЭКОЛОГИЧЕСКАЯ БЕЗОПАСНОСТЬ</string>
-    <string name="head5">РАЗДЕЛ 5. КОНТРОЛЬ ПРОИЗВОДСТВА</string>
+    <string name="head1">РАЗДЕЛ 1</string>
+    <string name="head2">РАЗДЕЛ 2</string>
+    <string name="head3">РАЗДЕЛ 3</string>
+    <string name="head4">РАЗДЕЛ 4</string>
+    <string name="head5">РАЗДЕЛ 5</string>
     <string name="end_title">ЗАКЛЮЧЕНИЕ</string>
     <string name="app_end">ПРИЛОЖЕНИЯ</string>
     <string name="a_test">Test</string>

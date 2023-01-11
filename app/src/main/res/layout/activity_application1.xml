@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Нагрузка на пружины:"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:src="@drawable/tbl_7_6_14"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Типовой перечень загрязняющих веществ, выбрасываемых в атмосферу источниками коксохимических предприятий:"/>
+        />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:src="@drawable/tblimg18_2"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Испытания оборудования коксохимпроизводства :"/>
+        />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:src="@drawable/tbl_21_9_4"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:src="@drawable/tbl_21_9_4_1"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:src="@drawable/tbl_21_9_4_2"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:src="@drawable/tbl_21_9_4_3"/>
+    </LinearLayout>
+</ScrollView>
